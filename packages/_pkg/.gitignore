@@ -1,0 +1,23 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+node_modules
+
+# typescript
+*.tsbuildinfo
+
+# dist
+#
+dist
+
+# turbo
+#
+.turbo
+
+# dotenv
+#
+.env
+.env.local
