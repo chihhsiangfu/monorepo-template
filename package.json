@@ -12,26 +12,17 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.2",
-    "concurrently": "^9.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.6",
-    "typescript": "^5.9.2",
-    "ultracite": "5.0.48"
+    "lint-staged": "^16.2.6",
+    "turbo": "^2.6.0",
+    "typescript": "^5.9.3",
+    "ultracite": "5.0.48",
+    "vitest": "catalog:"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
       "npx ultracite format"
     ]
   },
-  "packageManager": "pnpm@10.15.0",
-  "pnpm": {
-    "overrides": {
-      "react": "19.1.1",
-      "react-dom": "19.1.1",
-      "@types/react": "19.1.12",
-      "@types/react-dom": "19.1.9"
-    }
-  }
+  "packageManager": "pnpm@10.18.3"
 }
