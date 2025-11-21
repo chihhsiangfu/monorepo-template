@@ -13,8 +13,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.1.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "turbo": "^2.6.0",
+    "lint-staged": "^16.2.7",
+    "turbo": "^2.6.1",
     "typescript": "^5.9.3",
     "ultracite": "5.0.48",
     "vitest": "catalog:"
