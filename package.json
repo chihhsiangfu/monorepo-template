@@ -8,14 +8,15 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "clean": "turbo clean",
-    "check-types": "turbo check-types"
+    "check-types": "turbo check-types",
+    "hard-clean": "git clean -fdx"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "turbo": "^2.6.1",
-    "typescript": "^5.9.3",
+    "turbo": "^2.7.0",
+    "typescript": "catalog:",
     "ultracite": "5.0.48",
     "vitest": "catalog:"
   },
@@ -24,5 +25,5 @@
       "npx ultracite format"
     ]
   },
-  "packageManager": "pnpm@10.18.3"
+  "packageManager": "pnpm@10.12.1"
 }

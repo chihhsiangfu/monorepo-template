@@ -4,8 +4,11 @@ packages:
   - "examples/*"
 
 catalog:
-  "@types/node": ^24.10.1
-  "@types/react": ^19.2.2
-  tsdown: ^0.16.6
+  "@types/node": ^25.0.3
+  "@types/react": ^19.2.7
+  "@types/react-dom": ^19.2.3
+  react: ^19.2.3
+  react-dom: ^19.2.3
+  tsdown: ^0.18.1
   typescript: ^5.9.3
-  vitest: ^4.0.12
+  vitest: ^4.0.16
