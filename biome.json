@@ -67,9 +67,10 @@
         "useExhaustiveDependencies": "off"
       },
       "performance": {
+        "noBarrelFile": "off",
         "noImgElement": "off",
-        "useTopLevelRegex": "off",
-        "noNamespaceImport": "off"
+        "noNamespaceImport": "off",
+        "useTopLevelRegex": "off"
       },
       "style": {
         "noParameterAssign": "off",

@@ -1,7 +1,7 @@
 {
-  "name": "@repo/pkg",
+  "name": "@repo/template-pkg",
   "version": "0.0.0",
-  "description": "Repo Package",
+  "description": "Template Package",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
