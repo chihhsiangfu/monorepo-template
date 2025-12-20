@@ -66,6 +66,9 @@
         "noUnusedVariables": "off",
         "useExhaustiveDependencies": "off"
       },
+      "nursery": {
+        "useConsistentArrowReturn": "off"
+      },
       "performance": {
         "noBarrelFile": "off",
         "noImgElement": "off",
