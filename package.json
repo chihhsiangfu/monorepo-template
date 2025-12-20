@@ -12,17 +12,17 @@
     "hard-clean": "git clean -fdx"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.2",
+    "@biomejs/biome": "2.3.10",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "turbo": "^2.7.0",
     "typescript": "catalog:",
-    "ultracite": "5.0.48",
+    "ultracite": "6.4.2",
     "vitest": "catalog:"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
-      "npx ultracite format"
+      "pnpm dlx ultracite fix"
     ]
   },
   "packageManager": "pnpm@10.12.1"

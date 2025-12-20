@@ -1,10 +1,31 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-  "extends": ["ultracite"],
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "!**/node_modules",
+      "!**/.next",
+      "!**/dist",
+      "!**/build",
+      "!**/components/ui"
+    ]
+  },
   "formatter": {
     "enabled": true,
-    "formatWithErrors": true,
     "indentStyle": "space",
+    "formatWithErrors": true,
     "indentWidth": 2,
     "lineWidth": 80,
     "lineEnding": "lf",
@@ -45,12 +66,6 @@
         "noUnusedVariables": "off",
         "useExhaustiveDependencies": "off"
       },
-      "nursery": {
-        "noAwaitInLoop": "off",
-        "noNoninteractiveElementInteractions": "off",
-        "noUnknownAtRule": "off",
-        "noImportantStyles": "off"
-      },
       "performance": {
         "noImgElement": "off",
         "useTopLevelRegex": "off",
@@ -81,15 +96,5 @@
       }
     }
   },
-  "files": {
-    "includes": [
-      "**",
-      "!**/node_modules/**",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/components/ui/**",
-      "!**/*.d.ts",
-      "!**/drizzle/**"
-    ]
-  }
+  "extends": ["ultracite/core", "ultracite/react", "ultracite/next"]
 }

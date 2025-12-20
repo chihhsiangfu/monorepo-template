@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@repo/template-ui/*": ["./*"]
-    }
+    },
+    "strictNullChecks": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
