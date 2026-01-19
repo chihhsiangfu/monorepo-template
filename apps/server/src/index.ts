@@ -6,7 +6,7 @@ import { app } from "./app";
 serve(
   {
     fetch: app.fetch,
-    port: 3001,
+    port: 8080,
   },
   (info) => {
     console.log(`Server is running on http://localhost:${info.port}`);
