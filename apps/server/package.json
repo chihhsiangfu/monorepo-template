@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "migrate-db": "tsx scripts/migrate-db.ts",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "check-types": "tsc -b",
     "db:generate": "drizzle-kit generate",
@@ -15,16 +16,17 @@
     "better-auth:migrate-db": "npx @better-auth/cli@latest migrate"
   },
   "dependencies": {
-    "@electric-sql/pglite": "^0.3.14",
+    "@electric-sql/pglite": "^0.3.15",
     "@hono/node-server": "^1.19.9",
-    "@orpc/client": "^1.13.2",
-    "@orpc/server": "^1.13.2",
+    "@orpc/client": "^1.13.4",
+    "@orpc/server": "^1.13.4",
     "axios": "^1.13.2",
-    "better-auth": "^1.4.10",
+    "better-auth": "^1.4.17",
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.45.1",
-    "hono": "^4.11.4",
-    "zod": "^4.3.4"
+    "hono": "^4.11.5",
+    "postgres": "^3.4.8",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "catalog:",
