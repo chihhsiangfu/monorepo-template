@@ -7,18 +7,30 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "clean": {
-      "dependsOn": ["^clean"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    },
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "clean": {
+      "cache": false
+    },
+    "lint": {
+      "cache": false
+    },
+    "test": {
+      "cache": false
+    },
+    "test:e2e": {
+      "cache": false
+    },
+    "check-types": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
     }
   }
 }

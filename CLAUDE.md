@@ -5,7 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Important
 
 - Always follow **ultracite-code-standards** when working with code in this repository.
-- Always use `pnpm check-types` to check for type errors.
+- Always use `pnpm check-types` to check for type errors after editing code.
+- Always use `pnpm lint` to check for lint errors after editing code.
+- Always use `pnpm test` to run tests after editing code.
+- Always use `pnpm test:e2e` to run tests after editing code.
 
 ## Rules and Skills Structure
 

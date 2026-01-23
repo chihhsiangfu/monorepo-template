@@ -8,6 +8,11 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "clean": "turbo clean",
+    "lint": "pnpm dlx ultracite fix",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
     "check-types": "turbo check-types",
     "hard-clean": "git clean -fdx"
   },
