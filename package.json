@@ -30,7 +30,7 @@
       "pnpm dlx ultracite fix"
     ]
   },
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.1",
   "pnpm": {
     "overrides": {
       "drizzle-orm": "0.45.1",
