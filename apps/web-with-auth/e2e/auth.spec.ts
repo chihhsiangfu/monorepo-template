@@ -63,27 +63,9 @@ test.describe("Sign Up", () => {
 });
 
 test.describe("Sign In", () => {
-  test.describe.configure({ mode: "serial" });
-
-  const testUserEmail = `signin-test-${Date.now()}@example.com`;
-  const testUserPassword = "password123";
-
-  test("setup: create test user via sign up", async ({ page }) => {
-    await page.goto("/sign-up");
-    await page.waitForLoadState("networkidle");
-
-    await page
-      .getByPlaceholder("Please enter your name")
-      .fill("Sign In Test User");
-    await page.getByPlaceholder("Please enter your email").fill(testUserEmail);
-    await page
-      .getByPlaceholder("Please enter your password")
-      .fill(testUserPassword);
-
-    await page.getByRole("button", { name: "Sign Up" }).click();
-
-    await expect(page).toHaveURL("/", { timeout: 10_000 });
-  });
+  // Use seeded test user from database (see apps/server/scripts/seed-db.ts)
+  const testUserEmail = "test@test.com";
+  const testUserPassword = "test1234";
 
   test("successfully signs in and redirects to home", async ({ page }) => {
     await page.goto("/sign-in");
