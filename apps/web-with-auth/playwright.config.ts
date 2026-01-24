@@ -7,6 +7,11 @@ dotenv.config({
   path: path.resolve(__dirname, "../server/.env"),
 });
 
+// Load environment variables from the .env file
+dotenv.config({
+  path: path.resolve(__dirname, ".env"),
+});
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -43,48 +48,23 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        launchOptions: {
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        },
+      },
     },
-
-    // {
-    //   name: "firefox",
-    //   use: { ...devices["Desktop Firefox"] },
-    // },
-
-    // {
-    //   name: "webkit",
-    //   use: { ...devices["Desktop Safari"] },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
 
   /* Run your local dev server before starting the tests */
   webServer: [
     {
-      command: "pnpm -F server dev",
+      command: "pnpm dev",
       url: "http://localhost:8080/health",
       reuseExistingServer: !process.env.CI,
       timeout: 120 * 1000,
-      cwd: path.resolve(__dirname, "../.."),
+      cwd: path.resolve(__dirname, "../server"),
     },
     {
       command: "pnpm dev",

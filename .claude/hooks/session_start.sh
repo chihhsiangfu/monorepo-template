@@ -16,7 +16,11 @@ pnpm install --frozen-lockfile
 # Reset local database
 pnpm local:db:reset
 
+# Copy environment variables
 cp "$CLAUDE_PROJECT_DIR/apps/server/.env.example" "$CLAUDE_PROJECT_DIR/apps/server/.env"
 cp "$CLAUDE_PROJECT_DIR/apps/web-with-auth/.env.example" "$CLAUDE_PROJECT_DIR/apps/web-with-auth/.env"
+
+# Install Playwright
+npx playwright install chromium
 
 exit 0
