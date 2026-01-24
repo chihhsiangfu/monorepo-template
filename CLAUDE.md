@@ -10,6 +10,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Always use `pnpm test` to run tests after editing code.
 - Always use `pnpm test:e2e` to run tests after editing code.
 
+## DB Management
+
+- Always use `pnpm local:db:reset` to reset the local database whenever you modify the database schema. This will generate the latest migration sql, delete the local database and recreate it with the latest schema, and seed the database with data you need for testing.
+
 ## Rules and Skills Structure
 
 - **Rules** (`.claude/rules/`): Automatically loaded based on file paths. Source of truth for project conventions.

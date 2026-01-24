@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "migrate-db": "tsx scripts/migrate-db.ts",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "check-types": "tsc -b",
     "db:generate": "drizzle-kit generate",
@@ -13,7 +12,11 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "better-auth:generate-db": "npx @better-auth/cli@latest generate",
-    "better-auth:migrate-db": "npx @better-auth/cli@latest migrate"
+    "better-auth:migrate-db": "npx @better-auth/cli@latest migrate",
+    "local:db:reset": "pnpm run db:generate && pnpm run local:db:delete && pnpm run local:db:migrate && pnpm run local:db:seed",
+    "local:db:delete": "rm -rf ./pglite-db",
+    "local:db:migrate": "tsx scripts/migrate-db.ts",
+    "local:db:seed": "tsx scripts/seed-db.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.3.15",

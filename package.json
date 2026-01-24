@@ -14,7 +14,8 @@
     "db:generate": "turbo db:generate",
     "db:migrate": "turbo db:migrate",
     "check-types": "turbo check-types",
-    "hard-clean": "git clean -fdx"
+    "hard-clean": "git clean -fdx",
+    "local:db:reset": "cd apps/server && pnpm run local:db:reset"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
