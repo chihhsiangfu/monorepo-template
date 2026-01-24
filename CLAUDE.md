@@ -30,3 +30,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | Skill                           | When to Use                              |
 | ------------------------------- | ---------------------------------------- |
 | **vercel-react-best-practices** | Developing React or Next.js applications |
+
+## Project Structure
+
+```
+monorepo-template/
+├── apps/
+│   ├── server/          # Backend API server (Hono + Drizzle + Better Auth)
+│   ├── web/             # Next.js frontend (port 3000)
+│   └── web-with-auth/   # Next.js frontend with authentication (port 3001)
+├── packages/
+│   ├── better-auth-hook/  # @repo/better-auth-hook - Better Auth React hooks
+│   ├── template-pkg/      # @repo/template-pkg - Template utility package
+│   └── template-pkg-ui/   # @repo/template-pkg-ui - Template UI components
+├── .claude/
+│   ├── rules/           # Auto-loaded rules based on file paths
+│   └── skills/          # Manually invoked skill sets
+├── biome.json           # Biome linter/formatter config
+├── turbo.json           # Turborepo build orchestration
+└── pnpm-workspace.yaml  # pnpm workspace config
+```
