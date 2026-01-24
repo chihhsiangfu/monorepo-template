@@ -1,0 +1,39 @@
+{
+  "name": "@repo/better-auth-hook",
+  "version": "0.0.0",
+  "description": "Better Auth Hook",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsdown --watch ./src",
+    "build": "tsdown",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "check-types": "tsc --noEmit",
+    "prepublishOnly": "bun run clean && bun run build"
+  },
+  "dependencies": {
+    "sonner": "^2.0.7"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": ">=5.90.5",
+    "better-auth": ">=1.4.0",
+    "react": ">=19.0.0",
+    "zod": ">=4.0.0",
+    "zustand": ">=5.0.0"
+  }
+}
