@@ -32,7 +32,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "tsdown --watch ./src",
+    "_dev": "tsdown --watch ./src",
     "build": "tsdown",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "check-types": "tsc --noEmit",
