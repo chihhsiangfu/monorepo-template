@@ -1,6 +1,6 @@
 "use client";
 
-import { UnauthenticatedSection } from "@repo/better-auth-ui";
+import { UnauthenticatedSection } from "@/components/auth/unauthenticated-section";
 
 export default function AuthLayout({
   children,

@@ -1,6 +1,6 @@
 "use client";
 
-import { ForgetPasswordCard } from "@repo/better-auth-ui";
+import { ForgetPasswordCard } from "@/components/auth/forget-password-card";
 
 export default function ForgetPasswordPage() {
   return <ForgetPasswordCard />;

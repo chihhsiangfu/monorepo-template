@@ -1,6 +1,6 @@
 "use client";
 
-import { AccountSettingsCard } from "@repo/better-auth-ui";
+import { AccountSettingsCard } from "@/components/auth/account-settings-card";
 import { AppContent } from "@/widgets/layout/app-content";
 
 export default function AccountSettingsPage() {

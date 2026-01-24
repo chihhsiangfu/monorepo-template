@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthenticatedSection } from "@repo/better-auth-ui";
+import { AuthenticatedSection } from "@/components/auth/authenticated-section";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/widgets/app-sidebar/app-sidebar";
 

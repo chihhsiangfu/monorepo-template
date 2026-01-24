@@ -1,6 +1,6 @@
 "use client";
 
-import { SignUpCard } from "@repo/better-auth-ui";
+import { SignUpCard } from "@/components/auth/sign-up-card";
 
 export default function SignUpPage() {
   return <SignUpCard />;

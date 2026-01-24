@@ -1,8 +1,8 @@
 "use client";
 
-import { UserButton } from "@repo/better-auth-ui";
 import { useRouter } from "next/navigation";
 import { type FC, Fragment } from "react";
+import { UserButton } from "@/components/auth/user-button";
 import {
   Breadcrumb,
   BreadcrumbItem,

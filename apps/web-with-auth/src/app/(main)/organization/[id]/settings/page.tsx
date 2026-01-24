@@ -1,7 +1,7 @@
 "use client";
 
-import { OrganizationSettingsCard } from "@repo/better-auth-ui";
 import { useParams } from "next/navigation";
+import { OrganizationSettingsCard } from "@/components/organization/organization-settings-card";
 import { AppContent } from "@/widgets/layout/app-content";
 
 export default function OrganizationSettingsPage() {

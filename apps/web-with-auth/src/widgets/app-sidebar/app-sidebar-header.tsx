@@ -1,8 +1,8 @@
 "use client";
 
-import { OrganizationSwitcher } from "@repo/better-auth-ui";
 import { useRouter } from "next/navigation";
 import type { FC } from "react";
+import { OrganizationSwitcher } from "@/components/organization/organization-switcher";
 import { SidebarHeader } from "@/components/ui/sidebar";
 
 export const AppSidebarHeader: FC = () => {

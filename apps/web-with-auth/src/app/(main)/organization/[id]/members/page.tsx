@@ -1,10 +1,8 @@
 "use client";
 
-import {
-  OrganizationInvitationTable,
-  OrganizationMemberTable,
-} from "@repo/better-auth-ui";
 import { useParams } from "next/navigation";
+import { OrganizationInvitationTable } from "@/components/organization/organization-invitation-table";
+import { OrganizationMemberTable } from "@/components/organization/organization-member-table";
 import { AppContent } from "@/widgets/layout/app-content";
 
 export default function OrganizationMembersPage() {
