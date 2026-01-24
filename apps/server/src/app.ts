@@ -39,8 +39,12 @@ app.use("/rpc/*", async (c, next) => {
   await next();
 });
 
-app.get("/", (c) => {
+app.get("/health", (c) => {
   return c.text("OK");
+});
+
+app.get("/", (c) => {
+  return c.text("server");
 });
 
 export { app };
