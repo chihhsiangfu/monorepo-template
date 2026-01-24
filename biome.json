@@ -54,7 +54,8 @@
         "useKeyWithClickEvents": "off",
         "noStaticElementInteractions": "off",
         "useMediaCaption": "off",
-        "noSvgWithoutTitle": "off"
+        "noSvgWithoutTitle": "off",
+        "noNoninteractiveElementInteractions": "off"
       },
       "complexity": {
         "noForEach": "off",
