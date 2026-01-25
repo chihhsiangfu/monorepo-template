@@ -17,13 +17,11 @@ test.describe("Sign Up", () => {
 
     await expect(page.getByRole("heading", { name: "Sign Up" })).toBeVisible();
 
-    await page.getByPlaceholder("Please enter your name").fill("Test User");
-    await page.getByPlaceholder("Please enter your email").fill(uniqueEmail);
-    await page
-      .getByPlaceholder("Please enter your password")
-      .fill("password123");
+    await page.getByPlaceholder("Name").fill("Test User");
+    await page.getByPlaceholder("m@example.com").fill(uniqueEmail);
+    await page.getByPlaceholder("Password").fill("password123");
 
-    await page.getByRole("button", { name: "Sign Up" }).click();
+    await page.getByRole("button", { name: "Create an account" }).click();
 
     await expect(page).toHaveURL("/", { timeout: 10_000 });
     await expect(
@@ -35,13 +33,11 @@ test.describe("Sign Up", () => {
     await page.goto("/sign-up");
     await page.waitForLoadState("networkidle");
 
-    await page.getByPlaceholder("Please enter your name").fill("Test User");
-    await page
-      .getByPlaceholder("Please enter your email")
-      .fill("test@example.com");
-    await page.getByPlaceholder("Please enter your password").fill("12345");
+    await page.getByPlaceholder("Name").fill("Test User");
+    await page.getByPlaceholder("m@example.com").fill("test@example.com");
+    await page.getByPlaceholder("Password").fill("12345");
 
-    await page.getByRole("button", { name: "Sign Up" }).click();
+    await page.getByRole("button", { name: "Create an account" }).click();
 
     await expect(
       page.getByText("Password must be at least 6 characters long"),
@@ -52,15 +48,11 @@ test.describe("Sign Up", () => {
     await page.goto("/sign-up");
     await page.waitForLoadState("networkidle");
 
-    await page.getByPlaceholder("Please enter your name").fill("T");
-    await page
-      .getByPlaceholder("Please enter your email")
-      .fill("test@example.com");
-    await page
-      .getByPlaceholder("Please enter your password")
-      .fill("password123");
+    await page.getByPlaceholder("Name").fill("T");
+    await page.getByPlaceholder("m@example.com").fill("test@example.com");
+    await page.getByPlaceholder("Password").fill("password123");
 
-    await page.getByRole("button", { name: "Sign Up" }).click();
+    await page.getByRole("button", { name: "Create an account" }).click();
 
     await expect(
       page.getByText("Name must be at least 2 characters long"),
@@ -79,12 +71,10 @@ test.describe("Sign In", () => {
 
     await expect(page.getByRole("heading", { name: "Sign In" })).toBeVisible();
 
-    await page.getByPlaceholder("Please enter your email").fill(testUserEmail);
-    await page
-      .getByPlaceholder("Please enter your password")
-      .fill(testUserPassword);
+    await page.getByPlaceholder("m@example.com").fill(testUserEmail);
+    await page.getByPlaceholder("Password").fill(testUserPassword);
 
-    await page.getByRole("button", { name: "Sign In" }).click();
+    await page.getByRole("button", { name: "Login" }).click();
 
     await expect(page).toHaveURL("/", { timeout: 10_000 });
     await expect(
@@ -96,12 +86,10 @@ test.describe("Sign In", () => {
     await page.goto("/sign-in");
     await page.waitForLoadState("networkidle");
 
-    await page
-      .getByPlaceholder("Please enter your email")
-      .fill("test@example.com");
-    await page.getByPlaceholder("Please enter your password").fill("12345");
+    await page.getByPlaceholder("m@example.com").fill("test@example.com");
+    await page.getByPlaceholder("Password").fill("12345");
 
-    await page.getByRole("button", { name: "Sign In" }).click();
+    await page.getByRole("button", { name: "Login" }).click();
 
     await expect(
       page.getByText("Password must be at least 6 characters long"),
