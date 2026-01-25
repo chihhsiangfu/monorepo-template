@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Always use `pnpm check-types` to check for type errors after editing code.
 - Always use `pnpm lint` to check for lint errors after editing code.
 - Always use `pnpm test` to run tests after editing code.
-- Always use `pnpm test:e2e` to run tests after editing code.
+- Always use `pnpm test:e2e` to run tests after editing code. Some of the results may be flaky, but it's fine to ignore them.
 
 ## DB Management
 
