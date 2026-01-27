@@ -20,6 +20,9 @@
     "test": {
       "cache": false
     },
+    "test:coverage": {
+      "cache": false
+    },
     "test:e2e": {
       "cache": false
     },

@@ -26,3 +26,7 @@ tsconfig.tsbuildinfo
 # claude
 #
 .claude/sessions.log
+
+# test coverage
+#
+coverage
