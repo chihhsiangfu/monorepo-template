@@ -2,7 +2,17 @@ export type TestType = {
   name: string;
 };
 
-type Project = {
+export type Item = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  metadata: Record<string, any>;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type Project = {
   id: string;
   organizationId: string;
   title: string;
@@ -14,5 +24,3 @@ type Project = {
   createdAt: Date;
   updatedAt: Date;
 };
-
-export type { Project };
