@@ -151,3 +151,8 @@ catalog:
   nuqs: ^2.8.9
   zod: ^4.4.3
   zustand: ^5.0.14
+
+allowBuilds:
+  esbuild: false
+  sharp: false
+  workerd: false
