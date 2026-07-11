@@ -3,44 +3,36 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "check": "biome check --write .",
+    "check-lint": "ultracite check",
+    "fix-lint": "ultracite fix",
     "prepare": "husky",
     "dev": "turbo dev",
     "build": "turbo build",
-    "clean": "turbo clean",
-    "lint": "pnpm dlx ultracite fix",
+    "check-types": "turbo check-types",
     "test": "turbo test",
+    "test:watch": "turbo test:watch",
     "test:coverage": "turbo test:coverage",
     "test:e2e": "turbo test:e2e",
     "test:e2e:ui": "turbo test:e2e:ui",
-    "db:generate": "turbo db:generate",
-    "db:migrate": "turbo db:migrate",
-    "check-types": "turbo check-types",
-    "hard-clean": "git clean -fdx",
-    "local:db:reset": "cd apps/server && pnpm run local:db:reset"
+    "delete-node-modules": " rm -rf node_modules apps/*/node_modules packages/*/node_modules"
   },
-  "devDependencies": {
-    "@biomejs/biome": "2.3.11",
+   "devDependencies": {
+    "@biomejs/biome": "2.5.1",
+    "@vitest/coverage-istanbul": "catalog:",
+    "@vitest/ui": "catalog:",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "turbo": "^2.7.5",
+    "lint-staged": "^17.0.8",
+    "tsx": "catalog:",
+    "turbo": "^2.10.0",
     "typescript": "catalog:",
-    "ultracite": "7.0.12",
-    "vitest": "catalog:"
+    "ultracite": "7.5.6",
+    "vitest": "catalog:",
+    "wrangler": "catalog:"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
       "pnpm dlx ultracite fix"
     ]
   },
-  "packageManager": "pnpm@10.28.1",
-  "pnpm": {
-    "overrides": {
-      "@playwright/test": "1.56.1",
-      "@tanstack/react-query": "5.90.19",
-      "better-auth": "1.4.17",
-      "drizzle-orm": "0.45.1",
-      "zod": "4.3.6"
-    }
-  }
+  "packageManager": "pnpm@11.9.0"
 }

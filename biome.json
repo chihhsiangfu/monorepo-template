@@ -16,10 +16,12 @@
     "ignoreUnknown": true,
     "includes": [
       "!**/node_modules",
-      "!**/.next",
       "!**/dist",
       "!**/build",
-      "!**/components/ui"
+      "!**/components/ui",
+      "!**/*.html",
+      "!**/*.css",
+      "!**/*.svg"
     ]
   },
   "formatter": {
@@ -50,64 +52,21 @@
   },
   "linter": {
     "rules": {
-      "a11y": {
-        "useKeyWithClickEvents": "off",
-        "noStaticElementInteractions": "off",
-        "useMediaCaption": "off",
-        "noSvgWithoutTitle": "off",
-        "noNoninteractiveElementInteractions": "off"
-      },
-      "complexity": {
-        "noForEach": "off",
-        "noExcessiveCognitiveComplexity": "off"
-      },
-      "correctness": {
-        "noUnusedFunctionParameters": "off",
-        "noUnusedImports": "off",
-        "noUnusedVariables": "off",
-        "useExhaustiveDependencies": "off"
-      },
-      "nursery": {
-        "useConsistentArrowReturn": "off"
-      },
-      "performance": {
-        "noBarrelFile": "off",
-        "noImgElement": "off",
-        "noNamespaceImport": "off",
-        "useTopLevelRegex": "off"
-      },
       "style": {
-        "noParameterAssign": "off",
-        "useAsConstAssertion": "off",
-        "useDefaultParameterLast": "off",
-        "useEnumInitializers": "off",
-        "useSelfClosingElements": "off",
-        "useSingleVarDeclarator": "off",
-        "noUnusedTemplateLiteral": "off",
-        "useNumberNamespace": "off",
-        "noInferrableTypes": "off",
-        "noUselessElse": "off",
-        "useForOf": "off",
-        "noNonNullAssertion": "off",
-        "useCollapsedElseIf": "off",
-        "noNestedTernary": "off",
-        "useConsistentTypeDefinitions": "off"
-      },
-      "suspicious": {
-        "useAwait": "off",
-        "noConsole": "off",
-        "noExplicitAny": "off",
-        "noEmptyBlockStatements": "off",
-        "noArrayIndexKey": "off"
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "requireAscii": true,
+            "filenameCases": ["kebab-case"]
+          }
+        }
       }
     }
   },
   "extends": [
-    "ultracite/core",
-    "ultracite/react",
-    "ultracite/next",
     "ultracite/biome/core",
     "ultracite/biome/react",
-    "ultracite/biome/next"
+    "ultracite/biome/vitest",
+    "ultracite/biome/remix"
   ]
 }
