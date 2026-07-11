@@ -16,7 +16,7 @@
     "test:e2e:ui": "turbo test:e2e:ui",
     "delete-node-modules": " rm -rf node_modules apps/*/node_modules packages/*/node_modules"
   },
-   "devDependencies": {
+  "devDependencies": {
     "@biomejs/biome": "2.5.1",
     "@vitest/coverage-istanbul": "catalog:",
     "@vitest/ui": "catalog:",
