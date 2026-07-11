@@ -33,8 +33,6 @@ catalog:
   "@pixiv/three-vrm": ^3.5.4
   "@react-three/drei": ^10.7.7
   "@react-three/fiber": ^9.6.1
-  # ESM-friendly entry used via Vite alias (package main is CJS UMD)
-  "stats.js": ^0.17.0
   "@react-three/timeline": ^0.3.10
   "@react-three/uikit": ^1.0.74
   "@react-three/viverse": ^0.2.25
@@ -42,10 +40,6 @@ catalog:
   "@types/three": ^0.185.0
   three: ^0.185.1
   three-stdlib: ^2.36.1
-
-  # mujoco
-  "@mujoco/mujoco": 3.10.0
-  mujoco-react: 10.7.0
 
   # tanstack
   "@tanstack/react-form": ^1.33.0
@@ -136,12 +130,6 @@ catalog:
   # playwright
   "@playwright/test": ^1.61.1
   playwright: ^1.61.1
-
-  # testing-library
-  "@testing-library/jest-dom": ^6.9.1
-  "@testing-library/react": ^16.3.2
-  "@testing-library/user-event": ^14.6.1
-  jsdom: ^29.1.1
 
   # utilities
   cross-env: ^10.1.0
